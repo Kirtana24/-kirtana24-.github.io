@@ -4,154 +4,97 @@
 <meta charset="UTF-8">
 <title>Kirtana Minoy | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
 body {
-    background: #f7f5f2;
-    font-family: 'Inter', sans-serif;
-    color: #222;
+    background: #ffffff;
+    color: #111827;
+    line-height: 1.6;
 }
 
 /* Navbar */
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 25px 70px;
+    padding: 20px 60px;
+    border-bottom: 1px solid #e5e7eb;
 }
 
-.logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
+nav h2 {
+    font-size: 18px;
 }
 
 nav a {
-    margin-left: 30px;
+    margin-left: 25px;
     text-decoration: none;
-    color: #444;
-    font-weight: 500;
+    color: #374151;
 }
 
 nav a:hover {
-    color: #d97706;
+    color: #2563eb;
 }
 
-/* Hero */
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 60px 70px;
+/* Intro Section */
+.intro {
+    padding: 80px 60px;
+    max-width: 800px;
 }
 
-/* Left */
-.left {
-    max-width: 520px;
+.intro h1 {
+    font-size: 42px;
+    font-weight: 600;
 }
 
-.badge {
-    background: #e76f51;
-    color: white;
-    padding: 6px 14px;
-    font-size: 12px;
-    letter-spacing: 1px;
-    display: inline-block;
-    margin-bottom: 25px;
+.intro p {
+    margin-top: 15px;
+    color: #4b5563;
+    font-size: 16px;
 }
 
-.left h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 64px;
-    line-height: 1.1;
+/* Sections */
+section {
+    padding: 60px;
+    border-top: 1px solid #f1f1f1;
 }
 
-.highlight {
-    color: #e76f51;
+h3 {
+    margin-bottom: 20px;
+    font-size: 22px;
 }
 
-.left p {
-    margin-top: 20px;
-    color: #555;
-    line-height: 1.7;
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
-/* Buttons */
-.buttons {
-    margin-top: 30px;
-}
-
-.btn {
-    padding: 12px 22px;
-    border-radius: 4px;
-    border: none;
-    cursor: pointer;
-    font-size: 14px;
-    margin-right: 10px;
-}
-
-.primary {
-    background: #1f2937;
-    color: white;
-}
-
-.secondary {
-    background: transparent;
-    border: 1px solid #1f2937;
-}
-
-/* Right Card */
+/* Cards */
 .card {
-    width: 320px;
-    padding: 30px;
-    border-radius: 18px;
-    background: linear-gradient(145deg, #ff7a18, #ffb347);
-    color: white;
-    transform: rotate(-2deg);
-    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    padding: 20px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    transition: 0.3s;
 }
 
-.card h4 {
-    font-size: 13px;
-    letter-spacing: 1px;
-    opacity: 0.8;
+.card:hover {
+    border-color: #2563eb;
+    transform: translateY(-5px);
 }
 
-.number {
-    font-size: 48px;
-    margin: 10px 0;
-    font-weight: bold;
-}
-
-.tech {
-    margin-top: 20px;
-}
-
-.tech span {
-    background: rgba(255,255,255,0.2);
-    padding: 6px 12px;
-    margin: 4px;
-    display: inline-block;
-    border-radius: 6px;
-    font-size: 12px;
-}
-
-/* Responsive */
-@media(max-width: 900px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .card {
-        margin-top: 30px;
-        transform: none;
-    }
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #6b7280;
 }
 </style>
 </head>
@@ -159,50 +102,74 @@ nav a:hover {
 <body>
 
 <nav>
-    <div class="logo">Kirtana Minoy</div>
+    <h2>Kirtana Minoy</h2>
     <div>
-        <a href="#">Home</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
     </div>
 </nav>
 
-<section class="hero">
-
-<div class="left">
-    <div class="badge">OPEN TO INTERNSHIPS</div>
-
-    <h1>
-        Developer <br>
-        & <span class="highlight">Problem Solver</span>
-    </h1>
-
+<!-- Intro -->
+<div class="intro">
+    <h1>Hi, I’m Kirtana — a Computer Science student.</h1>
     <p>
-        I create structured and efficient solutions using programming and web technologies.
-        Focused on building clean interfaces and improving problem-solving skills.
+        I enjoy solving problems, building simple and efficient applications,
+        and continuously improving my programming skills.
     </p>
-
-    <div class="buttons">
-        <button class="btn primary">View Projects</button>
-        <button class="btn secondary">Contact</button>
-    </div>
 </div>
 
-<div class="card">
-    <h4>CURRENT WORK</h4>
-    <div class="number">3</div>
-    <p>Projects Completed</p>
-
-    <div class="tech">
-        <span>C</span>
-        <span>Java</span>
-        <span>Python</span>
-        <span>HTML</span>
-        <span>CSS</span>
-    </div>
-</div>
-
+<!-- About -->
+<section id="about">
+    <h3>About</h3>
+    <p>
+        I am currently in my second year of Computer Science. My interests include
+        programming, data structures, and web development. I am actively working
+        on improving my technical and problem-solving skills.
+    </p>
 </section>
+
+<!-- Skills -->
+<section>
+    <h3>Skills</h3>
+    <div class="grid">
+        <div class="card">C</div>
+        <div class="card">Java</div>
+        <div class="card">Python</div>
+        <div class="card">HTML & CSS</div>
+        <div class="card">JavaScript</div>
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+    <h3>Projects</h3>
+    <div class="grid">
+        <div class="card">
+            <strong>Dining Philosophers</strong>
+            <p>Simulation of synchronization problem.</p>
+        </div>
+        <div class="card">
+            <strong>Graph Coloring</strong>
+            <p>Backtracking algorithm implementation.</p>
+        </div>
+        <div class="card">
+            <strong>N-Queens</strong>
+            <p>Classic problem solved using recursion.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+    <h3>Contact</h3>
+    <p>Email: your-email@example.com</p>
+    <p>GitHub: github.com/yourusername</p>
+</section>
+
+<footer>
+    <p>© 2026 Kirtana Minoy</p>
+</footer>
 
 </body>
 </html>
