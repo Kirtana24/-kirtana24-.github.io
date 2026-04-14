@@ -9,86 +9,125 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-    background: #f5f7fa;
-    color: #333;
+    background: #f5f3ef;
+    color: #1f2937;
 }
 
 /* Navbar */
 nav {
     display: flex;
-    justify-content: center;
-    background: #1f2937;
-    padding: 15px;
-}
-
-nav a {
-    color: #fff;
-    margin: 0 20px;
-    text-decoration: none;
+    justify-content: space-between;
+    padding: 20px 60px;
     font-weight: 500;
 }
 
+nav .logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #374151;
+}
+
 nav a:hover {
-    color: #60a5fa;
+    color: #ea580c;
 }
 
-/* Header */
-header {
-    text-align: center;
-    padding: 60px 20px;
-    background: #ffffff;
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
 }
 
-header h1 {
-    font-size: 2.5rem;
+/* Left Content */
+.left {
+    max-width: 500px;
 }
 
-header p {
-    margin-top: 10px;
-    color: #555;
-}
-
-/* Sections */
-section {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 0 20px;
-}
-
-.card {
-    background: #fff;
-    padding: 25px;
+.tag {
+    display: inline-block;
+    background: #ea580c;
+    color: white;
+    padding: 6px 12px;
+    font-size: 12px;
     margin-bottom: 20px;
-    border-radius: 8px;
-    border: 1px solid #e5e7eb;
 }
 
-/* Headings */
-h2 {
-    margin-bottom: 10px;
-    color: #1f2937;
+.left h1 {
+    font-size: 56px;
+    line-height: 1.1;
 }
 
-/* List */
-ul {
-    padding-left: 20px;
+.left span {
+    color: #ea580c;
 }
 
-li {
-    margin-bottom: 8px;
+.left p {
+    margin-top: 20px;
+    color: #4b5563;
+    line-height: 1.6;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 15px;
+/* Buttons */
+.buttons {
+    margin-top: 25px;
+}
+
+.btn {
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+.primary {
     background: #1f2937;
-    color: #fff;
-    margin-top: 30px;
+    color: white;
+}
+
+.secondary {
+    background: transparent;
+    border: 1px solid #1f2937;
+}
+
+/* Right Card */
+.card {
+    width: 300px;
+    padding: 25px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #f97316, #f59e0b);
+    color: white;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.big {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.tech span {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 12px;
 }
 </style>
 </head>
@@ -96,60 +135,52 @@ footer {
 <body>
 
 <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+    <div class="logo">Kirtana Minoy</div>
+    <div>
+        <a href="#">Home</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+    </div>
 </nav>
 
-<header>
-    <h1>Kirtana Minoy</h1>
-    <p>Computer Science Student | Aspiring Software Developer</p>
-</header>
+<section class="hero">
 
-<section id="about">
-    <div class="card">
-        <h2>About</h2>
+    <!-- Left -->
+    <div class="left">
+        <div class="tag">AVAILABLE FOR INTERNSHIPS</div>
+
+        <h1>
+            Web Developer <br>
+            & <span>Designer</span>
+        </h1>
+
         <p>
-            I am a second-year Computer Science student with a strong interest in programming and problem-solving.
-            I am focused on developing my skills in software development and building practical projects.
+            I build clean and functional web experiences. Passionate about
+            turning ideas into well-designed and efficient applications.
         </p>
-    </div>
-</section>
 
-<section id="skills">
+        <div class="buttons">
+            <button class="btn primary">View My Work</button>
+            <button class="btn secondary">Get in Touch</button>
+        </div>
+    </div>
+
+    <!-- Right -->
     <div class="card">
-        <h2>Skills</h2>
-        <ul>
-            <li>Programming Languages: C, Java, Python</li>
-            <li>Web Development: HTML, CSS, JavaScript</li>
-            <li>Core Concepts: Data Structures, OOP</li>
-        </ul>
-    </div>
-</section>
+        <h3>Current Focus</h3>
+        <div class="big">3</div>
+        <p>Projects Completed</p>
 
-<section id="projects">
-    <div class="card">
-        <h2>Projects</h2>
-        <ul>
-            <li>Dining Philosophers Simulation</li>
-            <li>Graph Coloring Algorithm</li>
-            <li>N-Queens Problem Solver</li>
-        </ul>
+        <h3 style="margin-top:20px;">Tech Stack</h3>
+        <div class="tech">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Python</span>
+        </div>
     </div>
-</section>
 
-<section id="contact">
-    <div class="card">
-        <h2>Contact</h2>
-        <p>Email: your-email@example.com</p>
-        <p>GitHub: github.com/yourusername</p>
-    </div>
 </section>
-
-<footer>
-    <p>© 2026 Kirtana Minoy</p>
-</footer>
 
 </body>
 </html>
