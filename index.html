@@ -4,209 +4,170 @@
 <meta charset="UTF-8">
 <title>Kirtana Minoy | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background: linear-gradient(120deg, #eef2ff, #ffffff);
-    color: #1f2937;
+    background: #0f172a;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Navbar */
-nav {
+/* Split Layout */
+.container {
     display: flex;
-    justify-content: space-between;
-    padding: 20px 60px;
+    min-height: 100vh;
 }
 
-nav h2 {
-    font-weight: 600;
+/* Left Panel */
+.left {
+    width: 40%;
+    background: linear-gradient(180deg, #6366f1, #a855f7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
 }
 
-nav a {
-    margin-left: 25px;
-    text-decoration: none;
-    color: #374151;
+.left h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 40px;
 }
 
-nav a:hover {
-    color: #6366f1;
+.left p {
+    margin-top: 15px;
+    opacity: 0.9;
 }
 
-/* Hero */
-.hero {
-    text-align: center;
-    padding: 80px 20px;
+/* Right Panel */
+.right {
+    width: 60%;
+    padding: 50px;
 }
 
-.hero h1 {
-    font-size: 42px;
-}
-
-.hero span {
-    color: #6366f1;
-}
-
-.hero p {
-    margin-top: 10px;
-    color: #6b7280;
-}
-
-/* Section */
-section {
-    padding: 60px;
-}
-
-h3 {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-/* Cards */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.card {
-    background: rgba(255,255,255,0.7);
-    backdrop-filter: blur(10px);
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-8px);
+/* Section Titles */
+h2 {
+    margin-bottom: 20px;
+    color: #38bdf8;
 }
 
 /* Skills */
-.skill-box {
+.skill {
     margin-bottom: 15px;
 }
 
-.skill-name {
-    font-size: 14px;
-    margin-bottom: 5px;
-}
-
 .bar {
-    height: 8px;
-    background: #e5e7eb;
+    height: 6px;
+    background: #1e293b;
     border-radius: 10px;
 }
 
 .fill {
     height: 100%;
-    background: #6366f1;
+    background: #38bdf8;
     border-radius: 10px;
 }
 
-/* Footer */
-footer {
-    text-align: center;
+/* Cards */
+.card {
+    background: #1e293b;
     padding: 20px;
-    color: #6b7280;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    background: #334155;
+}
+
+/* Contact */
+.contact p {
+    margin: 5px 0;
+}
+
+/* Responsive */
+@media(max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+    .left, .right {
+        width: 100%;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<nav>
-    <h2>Kirtana Minoy</h2>
-    <div>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </div>
-</nav>
+<div class="container">
 
-<!-- Hero -->
-<div class="hero">
-    <h1>Hi, I'm <span>Kirtana</span></h1>
-    <p>Computer Science Student | Aspiring Developer</p>
+<!-- LEFT SIDE -->
+<div class="left">
+    <h1>Kirtana Minoy</h1>
+    <p>Computer Science Student</p>
+    <p>Passionate about coding & problem-solving</p>
 </div>
 
-<!-- About -->
-<section id="about">
-    <h3>About Me</h3>
-    <p style="text-align:center; max-width:600px; margin:auto;">
-        I am a second-year student passionate about programming and problem-solving.
-        I enjoy building projects and continuously improving my skills.
-    </p>
-</section>
+<!-- RIGHT SIDE -->
+<div class="right">
 
-<!-- Skills -->
-<section id="skills">
-    <h3>Skills</h3>
+    <h2>About</h2>
+    <div class="card">
+        I am a second-year student focused on building strong programming
+        skills and creating efficient solutions.
+    </div>
 
-    <div style="max-width:600px; margin:auto;">
-        <div class="skill-box">
-            <div class="skill-name">C</div>
+    <h2>Skills</h2>
+    <div class="card">
+
+        <div class="skill">C
             <div class="bar"><div class="fill" style="width:80%"></div></div>
         </div>
 
-        <div class="skill-box">
-            <div class="skill-name">Java</div>
+        <div class="skill">Java
             <div class="bar"><div class="fill" style="width:75%"></div></div>
         </div>
 
-        <div class="skill-box">
-            <div class="skill-name">Python</div>
+        <div class="skill">Python
             <div class="bar"><div class="fill" style="width:70%"></div></div>
         </div>
 
-        <div class="skill-box">
-            <div class="skill-name">HTML & CSS</div>
+        <div class="skill">HTML & CSS
             <div class="bar"><div class="fill" style="width:85%"></div></div>
         </div>
 
-        <div class="skill-box">
-            <div class="skill-name">JavaScript</div>
-            <div class="bar"><div class="fill" style="width:65%"></div></div>
-        </div>
     </div>
-</section>
 
-<!-- Projects -->
-<section id="projects">
-    <h3>Projects</h3>
-    <div class="grid">
-        <div class="card">
-            <h4>Dining Philosophers</h4>
-            <p>Simulation of synchronization problem.</p>
-        </div>
-        <div class="card">
-            <h4>Graph Coloring</h4>
-            <p>Backtracking algorithm implementation.</p>
-        </div>
-        <div class="card">
-            <h4>N-Queens</h4>
-            <p>Recursive solution using backtracking.</p>
-        </div>
+    <h2>Projects</h2>
+    <div class="card">
+        Dining Philosophers Simulation
     </div>
-</section>
 
-<!-- Contact -->
-<section id="contact">
-    <h3>Contact</h3>
-    <p style="text-align:center;">Email: your-email@example.com</p>
-</section>
+    <div class="card">
+        Graph Coloring Algorithm
+    </div>
 
-<footer>
-    <p>© 2026 Kirtana Minoy</p>
-</footer>
+    <div class="card">
+        N-Queens Problem Solver
+    </div>
+
+    <h2>Contact</h2>
+    <div class="card contact">
+        <p>Email: your-email@example.com</p>
+        <p>GitHub: github.com/yourusername</p>
+    </div>
+
+</div>
+
+</div>
 
 </body>
 </html>
