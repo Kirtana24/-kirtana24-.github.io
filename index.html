@@ -4,90 +4,95 @@
 <meta charset="UTF-8">
 <title>Kirtana Minoy | Portfolio</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-    background: #f5f3ef;
-    color: #1f2937;
+    background: #f7f5f2;
+    font-family: 'Inter', sans-serif;
+    color: #222;
 }
 
 /* Navbar */
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 20px 60px;
-    font-weight: 500;
+    padding: 25px 70px;
 }
 
-nav .logo {
-    font-size: 20px;
-    font-weight: bold;
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
 }
 
 nav a {
-    margin-left: 25px;
+    margin-left: 30px;
     text-decoration: none;
-    color: #374151;
+    color: #444;
+    font-weight: 500;
 }
 
 nav a:hover {
-    color: #ea580c;
+    color: #d97706;
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 60px;
+    justify-content: space-between;
+    padding: 60px 70px;
 }
 
-/* Left Content */
+/* Left */
 .left {
-    max-width: 500px;
+    max-width: 520px;
 }
 
-.tag {
-    display: inline-block;
-    background: #ea580c;
+.badge {
+    background: #e76f51;
     color: white;
-    padding: 6px 12px;
+    padding: 6px 14px;
     font-size: 12px;
-    margin-bottom: 20px;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 25px;
 }
 
 .left h1 {
-    font-size: 56px;
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
     line-height: 1.1;
 }
 
-.left span {
-    color: #ea580c;
+.highlight {
+    color: #e76f51;
 }
 
 .left p {
     margin-top: 20px;
-    color: #4b5563;
-    line-height: 1.6;
+    color: #555;
+    line-height: 1.7;
 }
 
 /* Buttons */
 .buttons {
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
 .btn {
-    padding: 12px 20px;
+    padding: 12px 22px;
+    border-radius: 4px;
     border: none;
     cursor: pointer;
+    font-size: 14px;
     margin-right: 10px;
-    font-weight: 500;
 }
 
 .primary {
@@ -102,32 +107,51 @@ nav a:hover {
 
 /* Right Card */
 .card {
-    width: 300px;
-    padding: 25px;
-    border-radius: 15px;
-    background: linear-gradient(135deg, #f97316, #f59e0b);
+    width: 320px;
+    padding: 30px;
+    border-radius: 18px;
+    background: linear-gradient(145deg, #ff7a18, #ffb347);
     color: white;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    transform: rotate(-2deg);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
 }
 
-.card h3 {
-    font-size: 14px;
-    margin-bottom: 10px;
+.card h4 {
+    font-size: 13px;
+    letter-spacing: 1px;
     opacity: 0.8;
 }
 
-.big {
-    font-size: 40px;
+.number {
+    font-size: 48px;
+    margin: 10px 0;
     font-weight: bold;
 }
 
+.tech {
+    margin-top: 20px;
+}
+
 .tech span {
-    display: inline-block;
     background: rgba(255,255,255,0.2);
-    padding: 5px 10px;
-    margin: 5px;
-    border-radius: 5px;
+    padding: 6px 12px;
+    margin: 4px;
+    display: inline-block;
+    border-radius: 6px;
     font-size: 12px;
+}
+
+/* Responsive */
+@media(max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card {
+        margin-top: 30px;
+        transform: none;
+    }
 }
 </style>
 </head>
@@ -145,40 +169,38 @@ nav a:hover {
 
 <section class="hero">
 
-    <!-- Left -->
-    <div class="left">
-        <div class="tag">AVAILABLE FOR INTERNSHIPS</div>
+<div class="left">
+    <div class="badge">OPEN TO INTERNSHIPS</div>
 
-        <h1>
-            Web Developer <br>
-            & <span>Designer</span>
-        </h1>
+    <h1>
+        Developer <br>
+        & <span class="highlight">Problem Solver</span>
+    </h1>
 
-        <p>
-            I build clean and functional web experiences. Passionate about
-            turning ideas into well-designed and efficient applications.
-        </p>
+    <p>
+        I create structured and efficient solutions using programming and web technologies.
+        Focused on building clean interfaces and improving problem-solving skills.
+    </p>
 
-        <div class="buttons">
-            <button class="btn primary">View My Work</button>
-            <button class="btn secondary">Get in Touch</button>
-        </div>
+    <div class="buttons">
+        <button class="btn primary">View Projects</button>
+        <button class="btn secondary">Contact</button>
     </div>
+</div>
 
-    <!-- Right -->
-    <div class="card">
-        <h3>Current Focus</h3>
-        <div class="big">3</div>
-        <p>Projects Completed</p>
+<div class="card">
+    <h4>CURRENT WORK</h4>
+    <div class="number">3</div>
+    <p>Projects Completed</p>
 
-        <h3 style="margin-top:20px;">Tech Stack</h3>
-        <div class="tech">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>Python</span>
-        </div>
+    <div class="tech">
+        <span>C</span>
+        <span>Java</span>
+        <span>Python</span>
+        <span>HTML</span>
+        <span>CSS</span>
     </div>
+</div>
 
 </section>
 
