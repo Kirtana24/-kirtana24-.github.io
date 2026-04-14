@@ -1,73 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Kirtana Minoy | Portfolio</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f6f9;
-            color: #333;
-        }
+<meta charset="UTF-8">
+<title>Kirtana Minoy | Portfolio</title>
 
-        header {
-            background: #4a6cf7;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-        nav {
-            background: #333;
-            padding: 10px;
-            text-align: center;
-        }
+body {
+    background: #f5f7fa;
+    color: #333;
+}
 
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: center;
+    background: #1f2937;
+    padding: 15px;
+}
 
-        nav a:hover {
-            color: #4a6cf7;
-        }
+nav a {
+    color: #fff;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 500;
+}
 
-        section {
-            padding: 40px;
-            max-width: 900px;
-            margin: auto;
-        }
+nav a:hover {
+    color: #60a5fa;
+}
 
-        .card {
-            background: white;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
+/* Header */
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: #ffffff;
+}
 
-        h2 {
-            color: #4a6cf7;
-        }
+header h1 {
+    font-size: 2.5rem;
+}
 
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 30px;
-        }
-    </style>
+header p {
+    margin-top: 10px;
+    color: #555;
+}
+
+/* Sections */
+section {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: #fff;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+/* Headings */
+h2 {
+    margin-bottom: 10px;
+    color: #1f2937;
+}
+
+/* List */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #1f2937;
+    color: #fff;
+    margin-top: 30px;
+}
+</style>
 </head>
-<body>
 
-<header>
-    <h1>Kirtana Minoy</h1>
-    <p>Computer Science Student | Aspiring Developer 👩‍💻</p>
-</header>
+<body>
 
 <nav>
     <a href="#about">About</a>
@@ -76,25 +102,28 @@
     <a href="#contact">Contact</a>
 </nav>
 
+<header>
+    <h1>Kirtana Minoy</h1>
+    <p>Computer Science Student | Aspiring Software Developer</p>
+</header>
+
 <section id="about">
     <div class="card">
-        <h2>About Me</h2>
+        <h2>About</h2>
         <p>
-            Hello! I am Kirtana Minoy, a second-year Computer Science student.
-            I am passionate about programming and problem-solving. I enjoy learning new technologies
-            and building projects that improve my skills.
+            I am a second-year Computer Science student with a strong interest in programming and problem-solving.
+            I am focused on developing my skills in software development and building practical projects.
         </p>
     </div>
 </section>
 
 <section id="skills">
     <div class="card">
-        <h2>Programming Languages</h2>
+        <h2>Skills</h2>
         <ul>
-            <li>C</li>
-            <li>Java</li>
-            <li>Python</li>
-            <li>HTML & CSS</li>
+            <li>Programming Languages: C, Java, Python</li>
+            <li>Web Development: HTML, CSS, JavaScript</li>
+            <li>Core Concepts: Data Structures, OOP</li>
         </ul>
     </div>
 </section>
@@ -119,7 +148,7 @@
 </section>
 
 <footer>
-    <p>© 2026 Kirtana Minoy | All Rights Reserved</p>
+    <p>© 2026 Kirtana Minoy</p>
 </footer>
 
 </body>
